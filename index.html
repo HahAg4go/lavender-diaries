@@ -8,93 +8,199 @@
     content="width=device-width, initial-scale=1.0"
   />
 
-  <title>Notepad</title>
+  <title>Kyla's Corner</title>
 
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background: linear-gradient(135deg, #fff7fa, #ffeef5);
+      color: #333;
+      line-height: 1.8;
       min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #f8f4ff, #efe5ff);
-      color: #4a4359;
     }
 
     header {
-      padding: 2rem;
       text-align: center;
+      padding: 80px 20px 50px;
     }
 
     header h1 {
-      color: #9c7bff;
-      margin: 0;
+      font-size: clamp(2.3rem, 6vw, 3.5rem);
+      color: #ff5c9f;
+      line-height: 1.2;
     }
 
-    main {
-      width: min(90%, 800px);
+    header p {
+      margin-top: 10px;
+      color: #666;
+      font-size: 1.1rem;
+    }
+
+    .container {
+      width: min(90%, 900px);
       margin: 0 auto;
-      padding: 2rem 0;
+      padding: 20px;
+    }
+
+    .quote,
+    .counter,
+    .card {
+      border-radius: 20px;
+      margin-bottom: 25px;
     }
 
     .quote {
-      background: #e9dcff;
-      padding: 1rem;
-      border-radius: 12px;
-      margin-bottom: 1.5rem;
+      text-align: center;
+      padding: 25px;
+      background: #ffe1ef;
+      font-style: italic;
+      color: #5c3a4a;
     }
 
+    .counter,
     .card {
       background: #ffffff;
-      padding: 1.5rem;
-      border-radius: 12px;
-      box-shadow: 0 8px 20px rgba(74, 67, 89, 0.12);
-      margin-bottom: 1.5rem;
+      padding: 25px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
     }
 
+    .counter {
+      text-align: center;
+    }
+
+    .counter h3,
     .card h2 {
-      color: #9c7bff;
-      margin-top: 0;
+      color: #ff5c9f;
+      margin-bottom: 10px;
     }
 
-    ol,
-    ul {
-      display: block;
-      list-style-type: none;
-      margin: 3px;
-      padding: 0;
+    .counter p {
+      font-size: 1.2rem;
+    }
+
+    .date {
+      color: #888;
+      font-size: 0.9rem;
+      margin-bottom: 15px;
     }
 
     button {
-      background: #9c7bff;
-      color: white;
+      padding: 10px 18px;
       border: none;
-      padding: 0.75rem 1rem;
-      border-radius: 8px;
+      border-radius: 10px;
+      background: #ff5c9f;
+      color: white;
       cursor: pointer;
+      margin-top: 10px;
       font-size: 1rem;
+      transition: opacity 0.2s ease, transform 0.2s ease;
     }
 
     button:hover {
-      background: #8a68f5;
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      color: #777;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding: 50px 20px 30px;
+      }
+
+      .container {
+        width: 100%;
+        padding: 16px;
+      }
+
+      .quote,
+      .counter,
+      .card {
+        padding: 20px;
+      }
     }
   </style>
 </head>
 
 <body>
   <header>
-    <h1>Notepad</h1>
+    <h1>🌸 Kyla's Corner</h1>
+    <p>
+      A BSN student documenting life, boredom, and the long journey to graduation.
+    </p>
   </header>
 
-  <main>
+  <main class="container">
     <section class="quote">
-      <p>This is a quote section.</p>
+      <p>"I don't want summer break to end. I just want the degree."</p>
+    </section>
+
+    <section class="counter">
+      <h3>🎓 Graduation Status</h3>
+      <p>Still not graduated.</p>
+
+      <button
+        type="button"
+        onclick="alert('Nice try. The university said no.')"
+      >
+        Request Early Graduation
+      </button>
     </section>
 
     <section class="card">
-      <h2>Card Title</h2>
-      <p>This is a simple card layout using your purple theme.</p>
+      <h2>☀️ Summer Break Thoughts</h2>
+      <div class="date">June 17, 2026</div>
 
-      <button type="button">Click Me</button>
+      <p>
+        Summer break is nice. No deadlines. No quizzes.
+        No sudden group work messages at midnight.
+        Unfortunately, I am now bored enough to create a blog.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🩺 BSN Survival Log #1</h2>
+      <div class="date">June 16, 2026</div>
+
+      <p>
+        Today's realization: nursing school feels like an endless side quest.
+        The final boss is graduation and I haven't unlocked the map yet.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>💄 Skincare Update</h2>
+      <div class="date">June 12, 2026</div>
+
+      <p>
+        Current mission: clear skin.
+        Current obstacle: my face doing whatever it wants.
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>🤡 Things I Thought College Would Be Like</h2>
+      <div class="date">June 10, 2026</div>
+
+      <p>
+        Expected: intellectual discussions and personal growth.
+        Reality: "What's the deadline again?" and caffeine.
+      </p>
     </section>
   </main>
+
+  <footer>
+    <p>Made during a severe case of summer-break boredom.</p>
+  </footer>
 </body>
 </html>
